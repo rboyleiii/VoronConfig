@@ -5,14 +5,14 @@ This doucment contains information about the printers setup and its wiring.
 At the moment of writing, the Voron is a 300mm 2.4. model having a clockwork. Ths Hotend consist of
 a E3D V6 clone from Amazon.
 
-Bed is equipped with a 235mm/\500W heater from Keenovo and an additional 3mm threaded thermistor to have more consistant readings on the bed temperature.
+Bed is equipped with a 235mm/\500W heater from AliExpress and an additional 3mm threaded thermistor to have more consistant readings on the bed temperature.
 
-As a controller I'm running the Duet3 mini +5 / 2x expansion.
+As a controller I'm running the Duet3 mini +5 / Expansion Mini 2+.
 LCD is ....
 
 ## Drives
 
-The Z-Drives and extruder are all connected directly to the mini 5+ Duex-Board, A-Drive, B-Drive are connected to the 2x expansion.
+The Z-Drives and extruder are all connected directly to the mini 5+ Duex-Board, A-Drive, B-Drive are connected to the Mini 2+ expansion.
 
 | Drive    | Connector |
 |:--------:|:---------:|
