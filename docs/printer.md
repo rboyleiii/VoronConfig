@@ -2,41 +2,42 @@
 
 This doucment contains information about the printers setup and its wiring.
 
-At the moment of writing, the Voron is a 300mm 2.2. model having a Mobius 3.1 Extruder. Ths Hotend consist of
-a E3D V6 clone from Trianglelab containing a *"PT100-style"* thermistor and a 40W heater.
+At the moment of writing, the Voron is a 300mm 2.4. model having a clockwork. Ths Hotend consist of
+a E3D V6 clone from Amazon.
 
-Bed is equipped with a 280mm/600W heater from Keenovo and an additional thermistor to have more consistant readings on
-the bed temperature.
+Bed is equipped with a 235mm/\500W heater from Keenovo and an additional 3mm threaded thermistor to have more consistant readings on the bed temperature.
 
-As a controller I'm running the Duet2 Wifi / Duex5 combo  (clone by Fysetc). The Duex board is jumpered to provide 12V
-to the fans (used for the bottom electronic compartment fan, I wasn't able to source a 120/120/15mm fan with 24V).
+As a controller I'm running the Duet3 mini +5 / 2x expansion.
+LCD is ....
 
 ## Drives
 
-The Z-Drives are all connected to the Duex-Board, A-Drive, B-Drive and Extruder is connected to the Duet. I'm using 1.8° steppers.
+The Z-Drives and extruder are all connected directly to the mini 5+ Duex-Board, A-Drive, B-Drive are connected to the 2x expansion.
 
 | Drive    | Connector |
 |:--------:|:---------:|
-|  A       | P0        |
-|  B       | P1        |
+| Z0       | P0        |
+| Z1       | P1        |
+| Z2       | P2        |
+| Z3       | P3        |
 | Extruder | P4        |
-| Z0       | P5        |
-| Z1       | P6        |
-| Z2       | P7        |
-| Z3       | P8        |
+|  A       | P5 (x2)   |
+|  B       | P6 (x2)   |
 
 Z-Drives are numbered clockwise beginning at the front left corner
 
 ```
 |-----|-----|
-|  6  |  7  |
+|  1  |  2  |
 |-----+-----|
-|  5  |  8  |
+|  0  |  3  |
 | ----+-----|
     Front
 ```
 
 **Attention, when you're flipping over the printer to do electronic motor positions a slighly different !!!**
+
+*** Not editied below ***
 
 ## Thermistors and Heaters (Thermal Section)
 In line 70 of [config.g](../rrf-config/sys/config.g) the thermal section starts configuring all the heaters and thermosensors.
