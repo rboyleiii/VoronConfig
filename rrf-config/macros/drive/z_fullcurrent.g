@@ -7,7 +7,7 @@
 ;; *ADJUST* all values
 
 M913 Z100       ; restore motor current percentage to 100%
-M906 Z900       ; motor drive current
+M906 Z1100       ; motor drive current
 M203 Z8000      ; maximum speed (mm/min)
 M201 Z500       ; maximum acceleration (mm^2/s)
 M566 Z120       ; instantaneous speed change (mm/min)

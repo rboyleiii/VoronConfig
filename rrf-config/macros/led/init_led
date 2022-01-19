@@ -1,0 +1,16 @@
+
+;LED Init state
+
+set global.LEDBrightness=175
+
+M150 X1 Q3000000           							; set LED type to NeoPixel and set SPI frequency to 3MHz
+M150 R255 U0   B0  P{global.LEDBrightness} S7 F1  	; back red  
+M150 R255 U255 B255 P{global.LEDBrightness} S7 F1   ; left side white
+M150 R255 U255 B255 P{global.LEDBrightness} S7 F1   ; front white
+M150 R255 U255 B255 P{global.LEDBrightness} S7   	; right side white F0=done
+
+;LCD
+M918 P2 E4 F2000000  						; Fysetc 12864mini
+M150 X2 R255 U0 B255 P225 S1 F1           	; display led
+M150 X2 R255 U0 B255 P127 S1 F1	         	; left encoder led
+M150 X2 R255 U0 B255 P127 S1 F0           	; right encoder led
